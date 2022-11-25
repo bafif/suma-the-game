@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/spr_sera0_fs0.png" type="Texture" id=1]
+[ext_resource path="res://characters/playable/sera/pc_sera0.gd" type="Script" id=2]
+
+[node name="sce_room_bafif0" type="Node2D"]
+
+[node name="pc_sera0" type="KinematicBody2D" parent="."]
+position = Vector2( 120, 66 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spr_sera0" type="Sprite" parent="pc_sera0"]
+texture = ExtResource( 1 )
+hframes = 4
