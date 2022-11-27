@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/playable/sera/pc_sera0.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/spr_room_baff0.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 128, 36 )
+
+[node name="sce_room_bafif0" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="spr_room_baff0" type="Sprite" parent="."]
+position = Vector2( 128, 72 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pc_sera0" parent="." instance=ExtResource( 1 )]
+position = Vector2( 129, 70 )
+
+[node name="walls" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="north0" type="CollisionShape2D" parent="walls"]
+position = Vector2( 128, 36 )
+shape = SubResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
+polygon = PoolVector2Array( 0, 72, 0, 144, 256, 144, 256, 72, 257, 72, 257, 145, -1, 145, -1, 72 )
