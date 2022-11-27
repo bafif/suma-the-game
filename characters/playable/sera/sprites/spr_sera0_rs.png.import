@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spr_sera0_ls.png-50876c40d738dfac60dd4323c02936de.stex"
+path="res://.import/spr_sera0_rs.png-8597545e18a26f5e6549491c23629716.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/spr_sera0_ls.png"
-dest_files=[ "res://.import/spr_sera0_ls.png-50876c40d738dfac60dd4323c02936de.stex" ]
+source_file="res://characters/playable/sera/sprites/spr_sera0_rs.png"
+dest_files=[ "res://.import/spr_sera0_rs.png-8597545e18a26f5e6549491c23629716.stex" ]
 
 [params]
 

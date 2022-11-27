@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spr_room_baff0.png-0536c805b21dcd1946e673a560a8ff9e.stex"
+path="res://.import/spr_genericwm_fs.png-d8bb021df58806a739549f36cd684bd0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/spr_room_baff0.png"
-dest_files=[ "res://.import/spr_room_baff0.png-0536c805b21dcd1946e673a560a8ff9e.stex" ]
+source_file="res://sprites/Character/spr_genericwm_fs.png"
+dest_files=[ "res://.import/spr_genericwm_fs.png-d8bb021df58806a739549f36cd684bd0.stex" ]
 
 [params]
 
