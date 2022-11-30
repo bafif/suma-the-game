@@ -55,6 +55,10 @@ var F_CARRIED_MASS = (1 - F_ATHLETICS) * F_BODY_MASS
 
 var F_MASS = F_BODY_MASS + F_CARRIED_MASS
 
+##########################
+# STARTS IN INSTATIATION #
+#
+
 
 #####################
 # CHARACTER PHYSICS #

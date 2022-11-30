@@ -2,9 +2,9 @@
 
 [ext_resource path="res://characters/playable/sera/pc_sera0.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/generic0_room.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/playable/sera/pc_sera0.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Furniture/bed_small0.tscn" type="PackedScene" id=4]
 
-[node name="sce_room_bafif0" type="Node2D"]
+[node name="sce_room_bafif0" type="YSort"]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -12,5 +12,7 @@ __meta__ = {
 [node name="room" parent="." instance=ExtResource( 2 )]
 
 [node name="pc_sera0" parent="." instance=ExtResource( 1 )]
-position = Vector2( 129, 70 )
-script = ExtResource( 3 )
+position = Vector2( 35, 65 )
+
+[node name="bed" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13, 60 )

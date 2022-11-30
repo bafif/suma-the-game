@@ -4,61 +4,63 @@
 [ext_resource path="res://sprites/Limit/spr_Hwall_baff0.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 129.5, 36 )
-
-[sub_resource type="SegmentShape2D" id=2]
-a = Vector2( -127, -100 )
-b = Vector2( -127, 45 )
-
-[sub_resource type="SegmentShape2D" id=3]
-a = Vector2( 129, 107 )
-b = Vector2( -129, 107 )
+extents = Vector2( 80, 24 )
 
 [sub_resource type="SegmentShape2D" id=4]
 a = Vector2( 127, -36 )
-b = Vector2( 127, 109 )
+b = Vector2( 127, 102 )
 
-[node name="room" type="StaticBody2D"]
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( -127, -100 )
+b = Vector2( -127, 37.9999 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( 32, 107 )
+b = Vector2( -128, 107 )
+
+[node name="room" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="spr_floor" type="Sprite" parent="."]
-position = Vector2( 128, 72 )
+position = Vector2( 80, 93 )
+scale = Vector2( 0.625, 0.625 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="spr_wall" type="Sprite" parent="."]
-position = Vector2( 128, 36 )
-scale = Vector2( 1, 0.5 )
+[node name="WallN" type="StaticBody2D" parent="."]
+
+[node name="spr_wall" type="Sprite" parent="WallN"]
+position = Vector2( 80, 24 )
+scale = Vector2( 0.625, 0.333333 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="coll_Nwall" type="CollisionShape2D" parent="."]
-position = Vector2( 128.5, 36 )
+[node name="coll_Nwall" type="CollisionShape2D" parent="WallN"]
+position = Vector2( 80, 24 )
 shape = SubResource( 1 )
-
-[node name="coll_Ewall" type="CollisionShape2D" parent="."]
-position = Vector2( 128, 100 )
-shape = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="coll_Swall" type="CollisionShape2D" parent="."]
-position = Vector2( 128, 36 )
-shape = SubResource( 3 )
+[node name="WallsWE" type="StaticBody2D" parent="."]
+position = Vector2( 0, 3.8147e-06 )
+scale = Vector2( 1.61006, 1.8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="coll_Wwall" type="CollisionShape2D" parent="."]
-position = Vector2( 128, 36 )
+[node name="coll_Ewall" type="CollisionShape2D" parent="WallsWE"]
+position = Vector2( 19.875, 20 )
+scale = Vector2( 0.621094, 0.555556 )
 shape = SubResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="coll_Wwall" type="CollisionShape2D" parent="WallsWE"]
+position = Vector2( 79.5, 55.5556 )
+scale = Vector2( 0.621094, 0.555556 )
+shape = SubResource( 2 )
+
+[node name="WallS" type="StaticBody2D" parent="."]
+
+[node name="coll_Swall" type="CollisionShape2D" parent="WallS"]
+position = Vector2( 128, 30 )
+shape = SubResource( 3 )

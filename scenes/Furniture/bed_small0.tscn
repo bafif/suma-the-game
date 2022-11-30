@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/Furniture/spr_bed_small0.png" type="Texture" id=1]
+
+[node name="bed" type="StaticBody2D"]
+position = Vector2( 13, 85 )
+
+[node name="spr_bed" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PoolVector2Array( -12, 23, 12, 23, 12, -13, -12, -13 )
+one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
