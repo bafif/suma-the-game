@@ -12,7 +12,7 @@ __meta__ = {
 [node name="room" parent="." instance=ExtResource( 2 )]
 
 [node name="pc_sera0" parent="." instance=ExtResource( 1 )]
-position = Vector2( 35, 65 )
+position = Vector2( 26, 110 )
 
 [node name="bed" parent="." instance=ExtResource( 4 )]
 position = Vector2( 13, 60 )
