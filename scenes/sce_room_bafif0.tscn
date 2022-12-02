@@ -4,15 +4,17 @@
 [ext_resource path="res://scenes/generic0_room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Furniture/bed_small0.tscn" type="PackedScene" id=4]
 
-[node name="sce_room_bafif0" type="YSort"]
+[node name="sce_room_bafif0" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="room" parent="." instance=ExtResource( 2 )]
 
-[node name="pc_sera0" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26, 110 )
+[node name="YSort" type="YSort" parent="."]
 
-[node name="bed" parent="." instance=ExtResource( 4 )]
+[node name="bed" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 13, 60 )
+
+[node name="pc_sera0" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 26, 110 )

@@ -59,7 +59,9 @@ var F_MASS = F_BODY_MASS + F_CARRIED_MASS
 # STARTS AT INSTATIATION #
 ##########################
 
-onready var animationSera = $ani_sera0
+onready var animationPlayer = $ani_sera0
+onready var animationTree = $anitree_sera0
+onready var animationState = animationTree.get("parameters/playback")
 
 #####################
 # CHARACTER PHYSICS #
@@ -74,8 +76,10 @@ func _physics_process(delta):
 	var delta2 = 3600 * delta * delta
 	
 	
-	## CHARACTER MOVEMENT ##
-		
+	######################
+	# CHARACTER MOVEMENT #
+	######################
+	
 	# Direction
 	
 	var direction = Vector2.ZERO
@@ -83,11 +87,8 @@ func _physics_process(delta):
 	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	direction = direction.normalized()
 	
-	######################
-	# CHARACTER MOVEMENT #
-	######################
-	
 	# Definitions
+	
 	var kin_force
 	if Input.is_action_pressed("ui_shift"):
 		kin_force = direction * ((F_ATHLETICS) * 16 + 32) * F_BODY_MASS * delta2 * 1.5
@@ -104,23 +105,20 @@ func _physics_process(delta):
 	
 	# Calculations	
 	
-	
-	
 	if kin_force.length() > F_STATIC_FRICTION:
 		
 		if direction == Vector2.ZERO:
-			velocity = velocity.move_toward(Vector2.ZERO, (-1) * kin_friction.length() * delta1)
-			animationSera.play("ani_sera0_fidle")
+			velocity = velocity.move_toward(Vector2.ZERO, (-1) * kin_friction.length() * delta1)			
 		else:
 			velocity = velocity.move_toward(direction * max_speed, acceleration.length() * F_ATHLETICS * delta1)
+			animationTree.set("parameters/run0/blend_position", direction)
+			animationTree.set("parameters/walk0/blend_position", direction)
+			animationState.travel("walk0")
 			if Input.is_action_pressed("ui_shift"):
-				animationSera.play("ani_sera0_frun")
-			else:
-				animationSera.play("ani_sera0_fwalk")
+				animationState.travel("run0")
 	else:
 		velocity = Vector2.ZERO
-		animationSera.play("ani_sera0_fidle")
-	
+		animationState.travel("idle0")
 	
 	# Actual movement 
 	

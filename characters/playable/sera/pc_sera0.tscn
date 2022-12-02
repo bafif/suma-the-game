@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://characters/playable/sera/pc_sera0.gd" type="Script" id=1]
-[ext_resource path="res://characters/playable/sera/sprites/spr_sera0_fs1.png" type="Texture" id=2]
+[ext_resource path="res://characters/playable/sera/sprites/spr_sera0_s1.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.5, 4 )
@@ -19,6 +19,58 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "ani_sera0_bidle"
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "ani_sera0_brun"
+length = 0.5
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 8 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "ani_sera0_bwalk"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 8 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -73,13 +125,186 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 0 ]
 }
 
+[sub_resource type="Animation" id=9]
+resource_name = "ani_sera0_lidle"
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "ani_sera0_lrun"
+length = 0.5
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 12 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "ani_sera0_lwalk"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 12 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "ani_sera0_ridle"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "ani_sera0_rrun"
+length = 0.5
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 4 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "ani_sera0_rwalk"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("spr_sera0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 4 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "ani_sera0_fidle"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "ani_sera0_frun"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "ani_sera0_brun"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "ani_sera0_rrun"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "ani_sera0_lrun"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=24]
+blend_point_0/node = SubResource( 20 )
+blend_point_0/pos = Vector2( 0, 0.9 )
+blend_point_1/node = SubResource( 21 )
+blend_point_1/pos = Vector2( 0, -0.9 )
+blend_point_2/node = SubResource( 22 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 23 )
+blend_point_3/pos = Vector2( -1, 0 )
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "ani_sera0_fwalk"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "ani_sera0_bwalk"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "ani_sera0_rwalk"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "ani_sera0_lwalk"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=29]
+blend_point_0/node = SubResource( 25 )
+blend_point_0/pos = Vector2( 0, 0.9 )
+blend_point_1/node = SubResource( 26 )
+blend_point_1/pos = Vector2( 0, -0.9 )
+blend_point_2/node = SubResource( 27 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 28 )
+blend_point_3/pos = Vector2( -1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachine" id=34]
+states/idle0/node = SubResource( 36 )
+states/idle0/position = Vector2( 297.21, 78.2222 )
+states/run0/node = SubResource( 24 )
+states/run0/position = Vector2( 464.333, 79 )
+states/walk0/node = SubResource( 29 )
+states/walk0/position = Vector2( 297.741, 164.667 )
+transitions = [ "idle0", "run0", SubResource( 37 ), "run0", "idle0", SubResource( 38 ), "idle0", "walk0", SubResource( 39 ), "walk0", "idle0", SubResource( 40 ) ]
+start_node = "idle0"
+graph_offset = Vector2( -161, 13 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=35]
+
 [node name="pc_sera0" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="spr_sera0" type="Sprite" parent="."]
 position = Vector2( 0, -11 )
 texture = ExtResource( 2 )
-hframes = 4
+hframes = 16
 frame = 2
 region_filter_clip = true
 
@@ -90,6 +315,23 @@ shape = SubResource( 1 )
 
 [node name="ani_sera0" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
+anims/ani_sera0_bidle = SubResource( 6 )
+anims/ani_sera0_brun = SubResource( 7 )
+anims/ani_sera0_bwalk = SubResource( 8 )
 anims/ani_sera0_fidle = SubResource( 4 )
 anims/ani_sera0_frun = SubResource( 5 )
 anims/ani_sera0_fwalk = SubResource( 3 )
+anims/ani_sera0_lidle = SubResource( 9 )
+anims/ani_sera0_lrun = SubResource( 10 )
+anims/ani_sera0_lwalk = SubResource( 11 )
+anims/ani_sera0_ridle = SubResource( 12 )
+anims/ani_sera0_rrun = SubResource( 13 )
+anims/ani_sera0_rwalk = SubResource( 14 )
+
+[node name="anitree_sera0" type="AnimationTree" parent="."]
+tree_root = SubResource( 34 )
+anim_player = NodePath("../ani_sera0")
+active = true
+parameters/playback = SubResource( 35 )
+parameters/run0/blend_position = Vector2( 0, 0 )
+parameters/walk0/blend_position = Vector2( 0, 0 )
